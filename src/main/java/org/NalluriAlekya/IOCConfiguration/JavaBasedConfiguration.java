@@ -15,6 +15,6 @@ public class JavaBasedConfiguration {
     // Example:
      @Bean
      public MyService myService() {
-        return new MyService();
+         return new MyService();
      }
 }

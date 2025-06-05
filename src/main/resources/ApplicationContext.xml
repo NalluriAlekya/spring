@@ -6,4 +6,12 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="xmlConfiguration" class="org.NalluriAlekya.IOCConfiguration.XMLBasedConfiguration"/>
+    <bean id="message" class="org.NalluriAlekya.DI.Message"/>
+    <bean id="constructorBasedDI" class="org.NalluriAlekya.DI.ConstructorBasedDI">
+        <constructor-arg ref="message"/>
+    </bean>
+    <bean id="setterBasedDI" class="org.NalluriAlekya.DI.SetterBasedDI">
+        <property name="message" ref="message"/>
+    </bean>
+
 </beans>
